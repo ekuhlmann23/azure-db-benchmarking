@@ -83,6 +83,18 @@
                 "description": "Specifies the key for the Cosmos DB account"
             }
         },
+        "managedIdentityName": {
+            "type": "string",
+            "metadata": {
+                "description": "Specifies the name of the User Assigned Managed identity to use with Cosmos DB account."
+            }
+        },
+        "managedIdentityClientId": {
+            "type": "string",
+            "metadata": {
+                "description": "Specifies the client id of the User Assigned Managed identity to use with Cosmos DB account."
+            }
+        },
         "vmCount": {
             "type": "int",
             "defaultValue": 1,
@@ -499,6 +511,12 @@
                     "bootDiagnostics": {
                         "enabled": true
                     }
+                }
+            },
+            "identity": {
+                "type": "UserAssigned",
+                "userAssignedIdentities": {
+                    "[resourceId('Microsoft.ManagedIdentity/userAssignedIdentities', parameters('managedIdentityName'))]": {}
                 }
             },
             "copy": {

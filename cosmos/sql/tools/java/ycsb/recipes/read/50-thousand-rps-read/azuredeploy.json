@@ -34,16 +34,10 @@
                 "description": "Specifies the key for the Cosmos DB account"
             }
         },
-        "managedIdentityName": {
-            "type": "string",
-            "metadata": {
-                "description": "Specifies the name of the User Assigned Managed identity to use with Cosmos DB account."
-            }
-        },
         "managedIdentityClientId": {
             "type": "string",
             "metadata": {
-                "description": "Specifies the client id of the User Assigned Managed identity to use with Cosmos DB account."
+                "description": "Specifies the User Assigned Managed identity to use with Cosmos DB account."
             }
         },
         "vmSize": {
@@ -226,9 +220,6 @@
                     },
                     "cosmosKey": {
                         "value": "[parameters('cosmosKey')]"
-                    },
-                    "managedIdentityName": {
-                        "value": "[parameters('managedIdentityName')]"
                     },
                     "managedIdentityClientId": {
                         "value": "[parameters('managedIdentityClientId')]"

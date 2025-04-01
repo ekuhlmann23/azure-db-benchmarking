@@ -46,6 +46,13 @@
                 "description": "Specifies the User Assigned Managed identity name to use with Cosmos DB account."
             }
         },
+        "useGateway": {
+            "type": "bool",
+            "defaultValue": false,
+            "metadata": {
+                "description": "Specifies if the gateway connectivity mode should be used. The default value 'false' indicates direct connectivity mode"
+            }
+        },
         "vmSize": {
             "type": "string",
             "defaultValue": "Standard_D8s_v4",
@@ -232,6 +239,9 @@
                     },
                     "managedIdentityName": {
                         "value": "[parameters('managedIdentityName')]"
+                    },
+                    "useGateway": {
+                        "value": "[parameters('useGateway')]"
                     },
                     "vmSize": {
                         "value": "[parameters('vmSize')]"

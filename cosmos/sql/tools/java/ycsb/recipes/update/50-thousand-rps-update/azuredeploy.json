@@ -230,6 +230,9 @@
                     "managedIdentityClientId": {
                         "value": "[parameters('managedIdentityClientId')]"
                     },
+                    "managedIdentityName": {
+                        "value": "[parameters('managedIdentityName')]"
+                    },
                     "vmSize": {
                         "value": "[parameters('vmSize')]"
                     },
